@@ -1,22 +1,42 @@
-<!-- innovault_backend/views/register.ejs -->
+<%- include('partials/header') %>
+<div class="container mt-5">
+  <h1>Register</h1>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - Innovault</title>
-</head>
-<body>
-    <h1>Register</h1>
-    <!-- Your registration form goes here -->
-    <form action="/register" method="post">
-        <!-- Form fields go here -->
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <!-- Other form fields go here -->
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
 
-        <button type="submit">Register</button>
-    </form>
-</body>
-</html>
+          <!-- Makes POST request to /register route -->
+          <form action="/register" method="POST">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+            <button type="submit" class="btn btn-dark">Register</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+            <i class="fab fa-google"></i>
+            Sign Up with Google
+          </a>
+        </div>
+    
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%- include('partials/header') %>
