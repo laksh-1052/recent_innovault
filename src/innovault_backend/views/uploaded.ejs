@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Uploaded</title>
+</head>
+<body>
+    <h1>File Uploaded Successfully</h1>
+    <p>File uploaded to IPFS. CID: <%= cid %></p>
+
+    <script>
+        // Function to generate a random 5-digit number
+        function generateRandomCode() {
+            return Math.floor(10000 + Math.random() * 90000);
+        }
+
+        // Check if the hashmap object exists in localStorage
+        let hashmap = JSON.parse(localStorage.getItem('cidToShortCode')) || {};
+
+        // Get the CID from the page
+        let cid = "<%= cid %>";
+        
+        // Check if the CID already has a short code
+        let shortCode = hashmap[cid];
+
+        // If no short code exists, generate one
+        if (!shortCode) {
+            shortCode = generateRandomCode().toString();
+            // Store the short code in the hashmap
+            hashmap[cid] = shortCode;
+            // Save the updated hashmap to localStorage
+            localStorage.setItem('cidToShortCode', JSON.stringify(hashmap));
+        }
+
+        // Display the short code on the page
+        document.write("<p>Passcode: " + shortCode + "</p>");
+    </script>
+</body>
+</html>
