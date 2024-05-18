@@ -211,6 +211,13 @@ app.post('/upload', upload.single('file'), async (req, res) => {
     const cid = ipfsResponse.data.Hash;
 
     res.render('uploaded', { cid }); // Pass CID to the uploaded.ejs template
+    const responseHtml = `
+      <p>File uploaded to IPFS. CID: ${cid}</p>
+      <button onclick="window.location.href='/dashboard'">Back to Dashboard</button>
+    `;
+    
+    // Send HTML response with back button
+    res.status(200).send(responseHtml);
   } catch (error) {
     console.error('Error uploading file to IPFS:', error);
     res.status(500).send('Internal Server Error');
