@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Passcode</title>
+</head>
+<body>
+    <h1>Enter Passcode for <%= fileName %></h1>
+    <form action="/verify-passcode" method="POST">
+        <input type="hidden" name="fileName" value="<%= fileName %>">
+        <input type="hidden" name="cid" value="<%= cid %>">
+        <label for="passcode">Passcode:</label>
+        <input type="password" name="passcode" id="passcode" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

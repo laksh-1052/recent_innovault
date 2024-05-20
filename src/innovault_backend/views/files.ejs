@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uploaded Files</title>
+</head>
+<body>
+    <h1>Uploaded Files</h1>
+    <ul>
+        <% for (const [fileName, cid] of Object.entries(fileRecords)) { %>
+            <li>
+                <strong>File Name:</strong> <%= fileName %> <br>
+                <strong>IPFS CID:</strong> <%= cid %> <br>
+                <form action="/passcode" method="GET">
+                    <input type="hidden" name="fileName" value="<%= fileName %>">
+                    <input type="hidden" name="cid" value="<%= cid %>">
+                    <button type="submit">Download</button>
+                </form>
+            </li>
+        <% } %>
+    </ul>
+    <a href="/upload">Upload Another File</a>
+</body>
+</html>
