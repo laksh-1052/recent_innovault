@@ -1,37 +1,45 @@
-body {
-    font-family: sans-serif;
-    font-size: 1.5rem;
+body,h1 {
+    font-family: "Raleway", sans-serif
+}
+body, html {
+    height: 100%
+}
+.bgimg {
+  background-image: url('./WhatsApp\ Image\ 2024-05-21\ at\ 20.09.58_194cefe7.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  
+}
+.buttons {
+    margin-left: 80%;
+    padding-top: 20px;
 }
 
-img {
-    max-width: 50vw;
-    max-height: 25vw;
-    display: block;
-    margin: auto;
-}
-
-form {
-    display: flex;
-    justify-content: center;
-    gap: 0.5em;
-    flex-flow: row wrap;
-    max-width: 40vw;
-    margin: auto;
-    align-items: baseline;
-}
-
-button[type="submit"] {
-    padding: 5px 20px;
-    margin: 10px auto;
-    float: right;
-}
-
-#greeting {
-    margin: 10px auto;
-    padding: 10px 60px;
-    border: 1px solid #222;
-}
-
-#greeting:empty {
-    display: none;
-}
+.buttongreen {
+    transition-duration: 0.4s;
+    border-radius: 12px;
+    padding: 12px 28px; 
+    background-color: black; /* Green */
+    color: white; 
+    border-color: grey;
+    margin-bottom: 20px;
+  }
+  
+  .buttongreen:hover {
+    background-color:rgb(128, 185, 110) ; /* Green */
+    color: white;
+  }
+.buttonred {
+    transition-duration: 0.4s;
+    border-radius: 12px;
+    padding: 12px 28px; 
+    background-color: black; /* Green */
+    color: white; 
+    border-color: grey;
+ }
+  
+  .buttonred:hover {
+    background-color: #cc3a3a; /* Red */
+    color: white;
+  }

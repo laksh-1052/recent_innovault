@@ -2,22 +2,32 @@
 <html>
 <head>
     <title>Uploaded Files</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/css/files.css">
 </head>
 <body>
-    <h1>Uploaded Files</h1>
-    <ul>
+    <h1 class="title">Explore everything you want here!</h1>
+    <div class="grid-container">
         <% for (const [fileName, cid] of Object.entries(fileRecords)) { %>
-            <li>
-                <strong>File Name:</strong> <%= fileName %> <br>
-                <strong>IPFS CID:</strong> <%= cid %> <br>
-                <form action="/passcode" method="GET">
-                    <input type="hidden" name="fileName" value="<%= fileName %>">
+            <div class="grid-item">
+                <div class="file-details">
+                    <strong class="filename">File Name:</strong>
+                    <div class="filename1"> <%= fileName %> </div>
+                </div>
+                <form action="/passcode" method="GET" class="download-form">
+                    <input type="hidden" name="fileName"  value="<%= fileName %>">
                     <input type="hidden" name="cid" value="<%= cid %>">
-                    <button type="submit">Download</button>
+                    <!-- <button class="btn btn-success rounded-pill px-3" type="submit">Download</button> -->
+                    <!-- <button class="w3-button w3-round-xxlarge">Download</button> -->
+                    <button class="w3-button w3-black"  type="submit">Download</button>
                 </form>
-            </li>
+            </div>
         <% } %>
-    </ul>
-    <a href="/upload">Upload Another File</a>
+    </div>
+    <a href="/upload" class="upload-link">Upload Another File</a>
 </body>
 </html>

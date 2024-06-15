@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download File</title>
+</head>
+<body>
+    <h1>Download File</h1>
+
+    <% if (fileType === 'image') { %>
+        <img src="<%= fileName %>" alt="Downloaded Image">
+    <% } else if (fileType === 'pdf') { %>
+        <embed src="<%= fileName %>" type="application/pdf" width="100%" height="600px">
+    <% } else if (fileType === 'text') { %>
+        <pre><%= fileName %></pre>
+    <% } else if (fileType === 'audio') { %>
+        <audio controls>
+            <source src="<%= fileName %>" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    <% } %>
+
+    <a href="<%= fileName %>" download>Download</a>
+</body>
+</html>

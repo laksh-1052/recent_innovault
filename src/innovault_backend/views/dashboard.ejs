@@ -1,26 +1,225 @@
-</html>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<div class="px-4 pt-5 my-5 text-center border-bottom">
-  <h1 class="display-4 fw-bold text-body-emphasis">Welcome to Innovault</h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">Welcome to Innovault, your digital fortress. Safeguarding your digital assets starts here. Explore the dashboard and secure your future today.</p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-      <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3" id="explore">Explore</button>
-      <button type="button" class="btn btn-outline-secondary btn-lg px-4" id="uploadButton">Contribute</button>
-    </div>
-  </div>
-  <div class="overflow-hidden" style="max-height: 30vh;">
-    </div>
-  </div>
-</div>
-<script>
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>InnoVault_Dasboard</title> 
+	<link rel="stylesheet" href="/css/dashboard.css"> 
+</head> 
+
+<body> 
+	
+	<!-- for header part -->
+	<header> 
+
+		<div class="logosec"> 
+			<div class="logo"><img src="/assets/WhatsApp Image 2024-05-22 at 15.43.02_6df7ba03.jpg" alt="logo"></div> 
+			<img src= "https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
+				class="icn menuicn"
+				id="menuicn"
+				alt="menu-icon"> 
+		</div> 
+
+		<!-- <div class="searchbar"> 
+			<input type="text"
+				placeholder="Search"> 
+			<div class="searchbtn"> 
+			<img src= "https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
+					class="icn srchicn"
+					alt="search-icon"> 
+			</div> 
+		</div>  -->
+
+		<div class="message"> 
+			<div class="circle"></div> 
+			 
+			<div class="dp"> 
+			<img src= "https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
+					class="dpicn"
+					alt="dp"> 
+			</div> 
+		</div> 
+
+	</header> 
+
+	<div class="main-container"> 
+		<div class="navcontainer"> 
+			<nav class="nav"> 
+				<div class="nav-upper-options"> 
+					<div class="nav-option option1"> 
+						<img src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
+							class="nav-img"
+							alt="dashboard"> 
+						<h3> Dashboard</h3> 
+					</div> 
+
+					<div class="option2 nav-option"> 
+						<img src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
+							class="nav-img"
+							alt="Explore"> 
+						<h3> Explore</h3> 
+					</div> 
+
+					<div class="nav-option option3"> 
+						<img src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
+							class="nav-img"
+							alt="Contribute"> 
+						<h3> Contribute</h3> 
+					</div> 
+
+					<div class="nav-option option4"> 
+						<img src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
+							class="nav-img"
+							alt="institution"> 
+						<h3> Institution</h3> 
+					</div> 					 
+
+					<!-- <div class="nav-option option6"> 
+						<img src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
+							class="nav-img"
+							alt="Delete"> 
+						<h3> Delete Account</h3> 
+					</div>  -->
+
+					<div class="nav-option logout"> 
+						<img src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
+							class="nav-img"
+							alt="logout"> 
+						<h3>Logout</h3> 
+					</div> 
+
+				</div> 
+			</nav> 
+		</div> 
+		<div class="main"> 
+
+			<!-- <div class="searchbar2"> 
+				<input type="text"
+					name=""
+					id=""
+					placeholder="Search"> 
+				<div class="searchbtn"> 
+				<img src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
+						class="icn srchicn"
+						alt="search-button"> 
+				</div> 
+			</div>  -->
+
+			<div class="box-container">  
+
+				<div class="txt"><p>Welcome to Innovault, your digital fortress. Safeguarding your digital assets starts here. Explore the dashboard and secure your future today.
+                </p>
+                </div>
+
+				<div class="box box4"> 
+					<div class="text"> 
+						<h2 class="topic-heading"><%= fileCount %></h2> 
+						<h2 class="topic">Uploaded Files</h2> 
+					</div> 
+					
+					
+
+					<img src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210185029/13.png" alt="Uploaded Files"> 
+				</div> 
+			</div> 
+
+			<div class="report-container"> 
+				<div class="report-header"> 
+					<h1 class="recent-Files">Recent Files</h1> 
+					<button class="view">View All</button> 
+				</div> 
+
+				<div class="report-body"> 
+					<div class="report-topic-heading"> 
+						<h3 class="t-op">Files</h3>  
+						<h3 class="t-op">Status</h3> 
+					</div> 
+
+					<div class="items"> 
+						<div class="item1"> 
+							<h3 class="t-op-nextlvl">File 1</h3>  
+							<h3 class="t-op-nextlvl label-tag">Uploaded</h3> 
+						</div> 
+
+						<div class="item1"> 
+							<h3 class="t-op-nextlvl">File 2</h3>  
+							<h3 class="t-op-nextlvl label-tag">Uploaded</h3> 
+						</div> 
+
+						<div class="item1"> 
+							<h3 class="t-op-nextlvl">File 3</h3>  
+							<h3 class="t-op-nextlvl label-tag">Uploaded</h3> 
+						</div> 
+
+						<div class="item1"> 
+							<h3 class="t-op-nextlvl">File 4</h3>  
+							<h3 class="t-op-nextlvl label-tag">Uploaded</h3> 
+						</div> 
+
+						<div class="item1"> 
+							<h3 class="t-op-nextlvl">File 5</h3>  
+							<h3 class="t-op-nextlvl label-tag">Uploaded</h3> 
+						</div> 
+
+						
+					</div> 
+				</div> 
+			</div> 
+		</div> 
+	</div> 
+  <script>
+
+  let menuicn = document.querySelector(".menuicn"); 
+  let nav = document.querySelector(".navcontainer"); 
+  let explore = document.querySelector(".option2"); // Corrected the selector
+  let upload = document.querySelector(".option3"); // Corrected the selector
+  let logout = document.querySelector(".logout"); // Corrected the selector
+  let institution = document.querySelector(".option4"); // Corrected the selector
+  let Delete = document.querySelector("nav-option option6");
   
-  document.getElementById("uploadButton").addEventListener("click", function(event){
-      event.preventDefault(); 
-      window.location.href = "/upload";
+  menuicn.addEventListener("click", () => { 
+      nav.classList.toggle("navclose"); 
   });
-  document.getElementById("explore").addEventListener("click", function(event){
+  
+  institution.addEventListener("click", () => { 
+      window.location.href = "https://www.gat.ac.in/"; 
+  });
+  
+  explore.addEventListener("click", function(event){
       event.preventDefault(); 
       window.location.href = "/files";
   });
-</script>
+  
+  document.querySelector(".view").addEventListener("click", function(event){
+      event.preventDefault(); 
+      window.location.href = "/files";
+  });
+  
+  upload.addEventListener("click", function(event){
+      event.preventDefault(); 
+      window.location.href = "/upload";
+  });
+  
+  logout.addEventListener("click", function(event){
+      event.preventDefault(); 
+      window.location.href = "/logout";
+  });
+  Delete.addEventListener("click", function(event){
+	event.preventDefault(); 
+	window.location.href = "/delete";
+});
+  
+
+</script>  
+</body> 
+</html>

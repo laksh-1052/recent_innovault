@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="/login" method="post">
+    <div class="imgcontainer">
+      <span onclick="closeModalAndRedirect('index.html')" class="close" title="Close Modal">&times;</span>
+      <img src="/assets/WhatsApp Image 2024-05-22 at 15.43.02_771916d3.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="username"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="username" required>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+        
+      <button type="submit" class="login">Login</button>
+    </div>
+    <div class="container" style="background-color:black">
+      <button type="button" onclick="closeModalAndRedirect('index.html')" class="cancelbtn">Cancel</button>
+      <button type="button" onclick="signUpPage()" class="hover" style="vertical-align:middle"><span>Sign In with Google</span></button>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+
+window.onload = function() {
+    modal.style.display = 'block';
+}
+
+function closeModalAndRedirect(url) {
+    modal.style.display = 'none';
+    window.location.href = url;
+}
+
+function signUpPage() {
+  window.location.href = "/auth/google";
+}
+</script>
+
+</body>
+</html>

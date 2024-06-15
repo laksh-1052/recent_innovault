@@ -3,14 +3,14 @@
 <head>
     <title>Enter Passcode</title>
 </head>
-<body>
-    <h1>Enter Passcode for <%= fileName %></h1>
+<body style="background-color: #121212; color: #fff; font-family: Arial, sans-serif; padding: 20px; text-align: center;">
+    <h1 style="color: #fff; font-size: 24px; margin-bottom: 20px;">Enter Passcode for <%= fileName %></h1>
     <form action="/verify-passcode" method="POST">
-        <input type="hidden" name="fileName" value="<%= fileName %>">
-        <input type="hidden" name="cid" value="<%= cid %>">
-        <label for="passcode">Passcode:</label>
-        <input type="password" name="passcode" id="passcode" required>
-        <button type="submit">Submit</button>
+        <input type="hidden" name="fileName" value="<%= fileName %>" style="display: none;">
+        <input type="hidden" name="cid" value="<%= cid %>" style="display: none;">
+        <label for="passcode" style="color: #fff; font-size: 18px;">Passcode:</label>
+        <input type="password" name="passcode" id="passcode" required style="margin-bottom: 10px;">
+        <button type="submit" style="background-color: #6c757d; color: #fff; border: none; padding: 10px 20px; font-size: 18px; cursor: pointer;">Submit</button>
     </form>
 </body>
 </html>

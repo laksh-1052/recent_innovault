@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Uploaded</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #bbb;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        strong {
+            color: #fff;
+        }
+
+        a {
+            color: #6c757d;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 18px;
+        }
+
+        a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <h1>File Uploaded Successfully</h1>
     <p><strong>File Name:</strong> <%= fileName %></p>
     <p><strong>IPFS CID:</strong> <%= cid %></p>
     <p><strong>Passcode:</strong> <%= passcode %></p>
-    <a href="/">Upload Another File</a>
+    <a href="/upload">Upload Another File</a>
     <a href="/files">View All Files</a>
 </body>
 </html>
