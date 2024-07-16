@@ -1,9 +1,9 @@
 # innovault
 
-Welcome to your new innovault project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
-
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
-
+Welcome to your new innovault project,
+Developed a decentralized application for safeguarding digital assets using Node.js, MongoDB, IPFS, and Dfinity’s Internet Computer.
+Implemented user authentication, file storage, and retrieval with secure passcode access.
+Deployed smart contracts using Motoko for asset protection.
 To learn more before you start working with innovault, see the following documentation available online:
 
 - [Quick Start](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
